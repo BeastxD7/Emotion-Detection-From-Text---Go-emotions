@@ -8,7 +8,12 @@ import { EmotionWheel } from "../predict/emotion-wheel";
 
 const PredictPage = () => {
   const [sentence, setSentence] = useState("");
-  const [result, setResult] = useState<any>(null);
+  interface Result {
+    probabilities: Record<string, number>;
+    filtered_emotions: Record<string, number>;
+  }
+
+  const [result, setResult] = useState<Result | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
