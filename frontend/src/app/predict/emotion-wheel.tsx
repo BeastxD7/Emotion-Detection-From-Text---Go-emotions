@@ -52,8 +52,8 @@ export function EmotionWheel({ emotions }: EmotionWheelProps) {
     // Draw emotions and values
     emotionEntries.forEach(([emotion, value], index) => {
       const angle = index * angleStep - Math.PI / 2;
-      const x = centerX + Math.cos(angle) * radius;
-      const y = centerY + Math.sin(angle) * radius;
+      // const x = centerX + Math.cos(angle) * radius;
+      // const y = centerY + Math.sin(angle) * radius;
 
       // Draw emotion label
       ctx.fillStyle = "#fff";
